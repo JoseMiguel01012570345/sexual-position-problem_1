@@ -24,4 +24,4 @@ Por tanto $P-P_k=\overline{P_j}$ , ahora podemos calcular qué energía se neces
 Digamos que $P_k=\frac{P_{ij}}{c_{ij}}E_k$ por lo que podemos despejar esta energía y manternos en la posición que menos energía requiera hasta el final del acto, que es cuando el participante acabe su energía, o sea $E_j=0$ para ello tenemos $\frac{P_kc_ij}{P_{ij}}=E_k$ y ahora la cantidad de tiempo que podemos estar en la posición de menor energía es $\frac{E_k}{c{0j}}$ , siendo $c_{0j}$ la posición menos energética . Por tanto el tiempo final para en participante $i$ es $\frac{E_{0j}-E_k}{c_{ij}}+\frac{E_k}{c0j}$. Si $\not \exist$ $i$ tal que $\frac{P_{ij}}{c_{ij}}E_{0j} \geq \overline{P_j}$ entonces el participante $i$ no tiene forma de llegar al orgasmo si que termine con toda su energía , que es lo mismo que no hay solucion para $i$ .
 
 ## Como correrlo?
-En la raiz del proyecto haga `py problem1.py` si esta en `windows` o si esta en `linux` python3 `problem1.py`
+En la raiz del proyecto haga `py problem1.py` si esta en `windows` o si esta en `linux` `python3 problem1.py`

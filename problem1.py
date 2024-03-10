@@ -27,23 +27,28 @@ def time( E0_j, cij , pij , p_roof_j , j):
 
             best_time = (E0_j - E_prime)/option[1]
             
-            return f"Time for person { j + 1 } is : { best_time  + (E_prime/option[1])} in {option[0]} "
+            return f"Best time for person { j + 1 } is : \033[2;31m { best_time  + (E_prime/option[1])} \033[1;36m in position {option[0]} "
     
         elif option[3] * E0_j == p_roof_j:
 
-            return f"Time for person { j + 1 } is : {E0_j/option[1]} in {option[0]}"
+            return f"Best time for person { j + 1 } is : \033[2;31m {E0_j/option[1]} \033[1;36m in position {option[0]}"
     
-    return f"no solution for person {j + 1}"
+    return False
 
  
 def my_solution(E0_j, cij , pij , p_roof_j):
     
-    result=[]
     for j,element in enumerate(cij,start=0):
         
-        result.append(time(E0_j[j],cij[j],pij[j],p_roof_j[j],j))
+        my_time = time(E0_j[j],cij[j],pij[j],p_roof_j[j],j)
+        
+        if not my_time:
+        
+            print(f"\033[2;31m no solution for person {j + 1} \033[0m ")
+        
+        else:
+            print(f"\033[1;32m {my_time} \033[0m")
     
-    return result
  
 os.system("cls")
 
@@ -65,6 +70,4 @@ pij =[
 
 p_roof_j = [ 20 , 30 , 25 , 35 ]
 
-result =  my_solution(E0_j=E0_j,cij=cij,pij=pij,p_roof_j=p_roof_j)
-
-print(result)
+my_solution(E0_j=E0_j,cij=cij,pij=pij,p_roof_j=p_roof_j)
